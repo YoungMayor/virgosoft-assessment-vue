@@ -5,6 +5,16 @@ import MainDrawCard from '@/components/draw/MainDrawCard.vue'
 import LiveChat from '@/components/draw/LiveChat.vue'
 import PurchaseBar from '@/components/draw/PurchaseBar.vue'
 import DepositModal from '@/components/modals/DepositModal.vue'
+import { draws } from '@/lib/data/draws'
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+
+const currentDraw = computed(() => {
+  const id = route.params.id as string
+  return (draws.find((d) => d.id === id) || draws[0])!
+})
 </script>
 
 <template>
@@ -12,11 +22,11 @@ import DepositModal from '@/components/modals/DepositModal.vue'
     <AppHeader />
 
     <div class="px-4 py-3 bg-background-start/90 border-b border-white/5">
-      <DrawHeader activeTab="15 Minute Draw" />
+      <DrawHeader :activeId="currentDraw.id" />
     </div>
 
     <main class="flex-1 px-4 py-6 pb-32 space-y-6 overflow-y-auto">
-      <MainDrawCard />
+      <MainDrawCard :draw="currentDraw" />
 
       <LiveChat />
     </main>
