@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import { Clock } from 'lucide-vue-next'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+function goToDetail() {
+  router.push('/draw/15min')
+}
 
 /**
  * LiveDrawCard: The primary "Fast Draw" card.
@@ -8,7 +15,8 @@ import { Clock } from 'lucide-vue-next'
 
 <template>
   <div
-    class="relative w-full p-5 overflow-hidden rounded-3xl bg-secondary/20 border border-secondary/30 backdrop-blur-sm shadow-xl shadow-secondary/10"
+    @click="goToDetail"
+    class="relative w-full p-5 overflow-hidden rounded-3xl bg-secondary/20 border border-secondary/30 backdrop-blur-sm shadow-xl shadow-secondary/10 cursor-pointer hover:border-secondary/50 transition-all active:scale-[0.98]"
   >
     <!-- Background Gradient Decoration -->
     <div class="absolute -top-10 -right-10 w-32 h-32 bg-secondary/20 rounded-full blur-3xl"></div>

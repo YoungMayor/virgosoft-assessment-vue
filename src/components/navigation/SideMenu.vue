@@ -26,8 +26,7 @@ const menuItems = [
 </script>
 
 <template>
-  <div class="fixed inset-0 z-50 flex" :class="{ 'pointer-events-none': !store.isSidebarOpen }">
-    <!-- Overlay -->
+  <div class="fixed inset-0 z-99 flex" :class="{ 'pointer-events-none': !store.isSidebarOpen }">
     <div
       class="fixed inset-0 bg-black/60 transition-opacity duration-300"
       :class="
@@ -36,12 +35,10 @@ const menuItems = [
       @click="store.closeSidebar"
     ></div>
 
-    <!-- Drawer -->
     <aside
       class="relative flex flex-col w-64 h-full bg-[#130722] border-r border-white/10 transform transition-transform duration-300 pointer-events-auto"
       :class="store.isSidebarOpen ? 'translate-x-0' : '-translate-x-full'"
     >
-      <!-- Header -->
       <div class="flex items-center justify-between p-6 border-b border-white/5">
         <h2 class="text-xl font-bold text-white">Menu</h2>
         <button @click="store.closeSidebar" class="p-1 rounded-full hover:bg-white/5">
@@ -49,7 +46,6 @@ const menuItems = [
         </button>
       </div>
 
-      <!-- Menu Items -->
       <div class="flex-1 overflow-y-auto py-4">
         <nav class="flex flex-col gap-1 px-4">
           <a
@@ -69,7 +65,6 @@ const menuItems = [
         </nav>
       </div>
 
-      <!-- Logout -->
       <div class="p-4 border-t border-white/5">
         <button
           class="flex items-center gap-3 w-full px-4 py-3 text-red-500 rounded-xl hover:bg-red-500/10 transition-colors"
@@ -79,7 +74,6 @@ const menuItems = [
         </button>
       </div>
 
-      <!-- Footer -->
       <div class="p-6 pt-2 text-xs text-center text-white/30">
         <p>Lotogram v1.0.0</p>
         <p>© 2024 All rights reserved</p>

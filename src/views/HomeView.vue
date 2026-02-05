@@ -3,14 +3,6 @@ import MobileLayout from '@/layouts/MobileLayout.vue'
 import HeroSection from '@/components/home/HeroSection.vue'
 import LiveDrawCard from '@/components/home/LiveDrawCard.vue'
 import DrawCardSmall from '@/components/home/DrawCardSmall.vue'
-
-// Mock data integration could happen here or in store
-import { useRouter } from 'vue-router'
-const router = useRouter()
-
-function goToDetail() {
-  router.push('/draw/15min')
-}
 </script>
 
 <template>
@@ -20,9 +12,7 @@ function goToDetail() {
       <HeroSection />
 
       <!-- Primary Draw -->
-      <div @click="goToDetail" class="cursor-pointer">
-        <LiveDrawCard />
-      </div>
+      <LiveDrawCard />
 
       <!-- Secondary Draws Grid -->
       <div class="grid grid-cols-2 gap-4 pb-8">

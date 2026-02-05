@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import TopNavBar from '@/components/navigation/TopNavBar.vue'
+import AppHeader from '@/components/navigation/AppHeader.vue'
 import BottomNavBar from '@/components/navigation/BottomNavBar.vue'
-import SideMenu from '@/components/navigation/SideMenu.vue'
 import DepositModal from '@/components/modals/DepositModal.vue'
 
 /**
@@ -12,9 +11,7 @@ import DepositModal from '@/components/modals/DepositModal.vue'
 
 <template>
   <div class="relative min-h-screen bg-background-start flex flex-col">
-    <TopNavBar />
-
-    <SideMenu />
+    <AppHeader />
 
     <main class="flex-1 pb-28 overview-hidden">
       <slot />

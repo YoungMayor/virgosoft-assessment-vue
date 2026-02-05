@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Clock, RefreshCw } from 'lucide-vue-next'
 import { computed } from 'vue'
+import { useRouter } from 'vue-router'
 
 const props = defineProps<{
   type: '30min' | '1hour'
@@ -8,13 +9,19 @@ const props = defineProps<{
   amount: string
 }>()
 
+const router = useRouter()
 const title = computed(() => (props.type === '30min' ? '30 Minute Draw' : '1 Hour Draw'))
 const isPurple = computed(() => props.type === '30min')
+
+function handleClick() {
+  router.push(`/draw/${props.type}`)
+}
 </script>
 
 <template>
   <div
-    class="flex flex-col p-4 bg-surface-lighter/50 border border-white/5 rounded-2xl backdrop-blur-sm hover:border-white/10 transition-colors"
+    @click="handleClick"
+    class="flex flex-col p-4 bg-surface-lighter/50 border border-white/5 rounded-2xl backdrop-blur-sm hover:border-white/10 transition-all cursor-pointer active:scale-95"
   >
     <!-- Header -->
     <div class="flex items-center justify-between mb-3">
