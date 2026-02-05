@@ -1,35 +1,29 @@
-@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+@import 'tailwindcss';
+
+:root {
+  color-scheme: dark;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+@theme {
+  --color-background-start: #1a0b2e;
+  --color-background-end: #000000;
+  --color-primary: #d946ef;
+  --color-primary-hover: #c026d3;
+  --color-secondary: #0f766e;
+  --color-secondary-muted: #0e7490;
+  --color-accent-gold: #fbbf24;
+  --color-surface: #111827;
+  --color-surface-lighter: #1f2937;
+  --color-text-muted: #94a3b8;
+
+  --font-sans: 'Inter', sans-serif;
+
+  --shadow-glow: 0 0 20px rgba(217, 70, 239, 0.5);
+  --shadow-glow-gold: 0 0 20px rgba(251, 191, 36, 0.5);
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+body {
+  @apply bg-gradient-to-b from-[#1a0b2e] to-black text-white min-h-screen font-sans antialiased;
 }
