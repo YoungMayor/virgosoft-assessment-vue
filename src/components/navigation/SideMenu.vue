@@ -11,8 +11,10 @@ import {
   LogOut,
   X,
 } from 'lucide-vue-next'
+import { useRouter } from 'vue-router'
 
 const store = useAppStore()
+const router = useRouter()
 
 const menuItems = [
   { label: 'Home', icon: Home, active: true },
@@ -53,6 +55,13 @@ const menuItems = [
               v-for="item in menuItems"
               :key="item.label"
               href="#"
+              @click.prevent="
+                () => {
+                  if (item.label === 'Home') router.push('/')
+                  // Add logic for other routes here if needed
+                  store.closeSidebar()
+                }
+              "
               class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200"
               :class="
                 item.active

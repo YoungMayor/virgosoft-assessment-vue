@@ -11,7 +11,6 @@ function goToDetail() {
 
 <template>
   <div
-    @click="goToDetail"
     class="relative w-full p-5 overflow-hidden rounded-3xl bg-secondary/20 border border-secondary/30 backdrop-blur-sm shadow-xl shadow-secondary/10 cursor-pointer hover:border-secondary/50 transition-all active:scale-[0.98]"
   >
     <div class="absolute -top-10 -right-10 w-32 h-32 bg-secondary/20 rounded-full blur-3xl"></div>
@@ -61,6 +60,7 @@ function goToDetail() {
 
       <button
         class="px-6 py-3 font-bold text-white bg-linear-to-r from-primary to-purple-600 rounded-xl hover:opacity-90 active:scale-95 transition-all shadow-lg shadow-primary/25"
+        @click="goToDetail"
       >
         Buy Ticket
       </button>

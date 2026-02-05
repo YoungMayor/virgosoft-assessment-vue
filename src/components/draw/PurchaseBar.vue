@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Minus, Plus } from 'lucide-vue-next'
+import { useAppStore } from '@/stores/app'
+
+const store = useAppStore()
 
 const ticketCount = ref(1)
 
@@ -43,6 +46,7 @@ function decrement() {
       </div>
 
       <button
+        @click="store.openDepositModal"
         class="flex-1 py-3.5 px-6 font-bold text-white bg-linear-to-r from-primary to-purple-600 rounded-xl shadow-lg shadow-primary/25 hover:opacity-90 active:scale-95 transition-all text-center"
       >
         Buy Ticket – ₺{{ ticketCount * 100 }}

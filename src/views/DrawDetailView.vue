@@ -4,6 +4,7 @@ import DrawHeader from '@/components/draw/DrawHeader.vue'
 import MainDrawCard from '@/components/draw/MainDrawCard.vue'
 import LiveChat from '@/components/draw/LiveChat.vue'
 import PurchaseBar from '@/components/draw/PurchaseBar.vue'
+import DepositModal from '@/components/modals/DepositModal.vue'
 </script>
 
 <template>
@@ -21,5 +22,7 @@ import PurchaseBar from '@/components/draw/PurchaseBar.vue'
     </main>
 
     <PurchaseBar />
+
+    <DepositModal />
   </div>
 </template>

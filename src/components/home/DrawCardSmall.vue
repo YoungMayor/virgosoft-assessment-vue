@@ -20,10 +20,8 @@ function handleClick() {
 
 <template>
   <div
-    @click="handleClick"
     class="flex flex-col p-4 bg-surface-lighter/50 border border-white/5 rounded-2xl backdrop-blur-sm hover:border-white/10 transition-all cursor-pointer active:scale-95"
   >
-    <!-- Header -->
     <div class="flex items-center justify-between mb-3">
       <div
         class="p-2 rounded-full"
@@ -35,15 +33,14 @@ function handleClick() {
       <span class="text-sm font-bold font-mono text-white/80">{{ timer }}</span>
     </div>
 
-    <!-- Content -->
     <h4 class="text-sm font-bold text-white mb-1">{{ title }}</h4>
     <span class="text-xs text-secondary-muted mb-0.5">Prize</span>
     <span class="text-lg font-bold" :class="isPurple ? 'text-primary' : 'text-white'">{{
       amount
     }}</span>
 
-    <!-- CTA -->
     <button
+      @click="handleClick"
       class="mt-3 w-full py-2 text-xs font-bold rounded-lg transition-all border"
       :class="
         isPurple
