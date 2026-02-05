@@ -14,7 +14,7 @@ function selectOption(option: string) {
 <template>
   <div
     v-if="store.isDepositModalOpen"
-    class="fixed inset-0 z-[60] flex items-center justify-center p-4"
+    class="fixed inset-0 z-60 flex items-center justify-center p-4"
   >
     <!-- Backdrop -->
     <div

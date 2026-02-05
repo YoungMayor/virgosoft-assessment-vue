@@ -25,5 +25,5 @@
 }
 
 body {
-  @apply bg-gradient-to-b from-[#1a0b2e] to-black text-white min-h-screen font-sans antialiased;
+  @apply bg-linear-to-b from-background-start to-black text-white min-h-screen font-sans antialiased;
 }

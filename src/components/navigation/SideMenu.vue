@@ -27,7 +27,7 @@ const menuItems = [
 
 <template>
   <Teleport to="body">
-    <div class="fixed inset-0 z-[99] flex" :class="{ 'pointer-events-none': !store.isSidebarOpen }">
+    <div class="fixed inset-0 z-99 flex" :class="{ 'pointer-events-none': !store.isSidebarOpen }">
       <div
         class="fixed inset-0 bg-black/60 transition-opacity duration-300"
         :class="

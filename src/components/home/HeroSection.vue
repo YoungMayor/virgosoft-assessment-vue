@@ -1,17 +1,10 @@
-<script setup lang="ts">
-/**
- * HeroSection: Displays the value proposition and total payout.
- * Emotion-first: Urgency + Social Proof.
- */
-</script>
-
 <template>
   <section class="flex flex-col items-center justify-center p-6 text-center space-y-2 mt-4">
     <h2 class="text-2xl font-bold text-white tracking-tight leading-tight">
       Someone wins within minutes.
     </h2>
     <h3
-      class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-fuchsia-400 to-primary animate-pulse"
+      class="text-3xl font-bold text-transparent bg-clip-text bg-linear-to-r from-primary via-fuchsia-400 to-primary animate-pulse"
     >
       Why not you?
     </h3>
