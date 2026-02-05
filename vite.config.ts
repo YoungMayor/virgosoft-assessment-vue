@@ -18,6 +18,9 @@ export default defineConfig({
         short_name: 'Lotogram',
         description: 'Premium Fintech & Gaming App',
         theme_color: '#1a0b2e',
+        background_color: '#1a0b2e',
+        display: 'standalone',
+        orientation: 'portrait',
         icons: [
           {
             src: 'pwa-192x192.png',
@@ -28,6 +31,22 @@ export default defineConfig({
             src: 'pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png',
+          },
+        ],
+        screenshots: [
+          {
+            src: 'screenshots/home-screen.png',
+            sizes: '1170x2532',
+            type: 'image/png',
+            form_factor: 'narrow',
+            label: 'Home Screen',
+          },
+          {
+            src: 'screenshots/draw-details.png',
+            sizes: '1170x2532',
+            type: 'image/png',
+            form_factor: 'narrow',
+            label: 'Draw Details',
           },
         ],
       },
