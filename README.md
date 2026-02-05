@@ -1,54 +1,71 @@
-# virgosoft-assessment-vue
+# Virgosoft Assessment Vue
 
-This template should help get you started developing with Vue 3 in Vite.
+A Vue.js application for the Virgosoft assessment.
 
-## Recommended IDE Setup
+## Getting Started
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### Prerequisites
 
-## Recommended Browser Setup
+- Node.js (v20.19.0 or >=22.12.0)
+- npm
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+### Installation
 
-## Type Support for `.vue` Imports in TS
+1. Clone the repository:
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+    ```sh
+    git clone <repository-url>
+    ```
 
-## Customize configuration
+2. Navigate to the project directory:
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+    ```sh
+    cd virgosoft-assessment-vue
+    ```
 
-## Project Setup
+3. Install dependencies:
 
-```sh
-npm install
-```
+    ```sh
+    npm install
+    ```
 
-### Compile and Hot-Reload for Development
+### Running Locally
+
+To start the development server:
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+The application will be available at `http://localhost:5173` (or the port shown in your terminal).
 
-```sh
-npm run build
-```
+## Features & Screenshots
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### Home Screen
 
-```sh
-npm run test:unit
-```
+The main landing page of the application, showing available draws and upcoming events.
+![Home Screen](screenshots/home-screen.png)
 
-### Lint with [ESLint](https://eslint.org/)
+### Side Menu
 
-```sh
-npm run lint
-```
+Navigation menu to access different sections of the application, such as Home, Tickets, and Transactions.
+![Side Menu](screenshots/side-menu.png)
+
+### Draw Details
+
+Detailed view of a specific draw, allowing users to view prize information and select tickets.
+![Draw Details](screenshots/draw-details.png)
+
+### Deposit Funds
+
+A dialog for users to add funds to their account to purchase tickets.
+![Deposit Funds Dialog](screenshots/deposit-funds-dialog.png)
+
+## Scripts
+
+- `npm run dev`: Start development server
+- `npm run build`: Build for production
+- `npm run preview`: Preview production build
+- `npm run test:unit`: Run unit tests
+- `npm run lint`: Run linting
+- `npm run format`: Format code with Prettier
