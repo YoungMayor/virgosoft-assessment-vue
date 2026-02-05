@@ -10,7 +10,7 @@ const navItems = [
 </script>
 
 <template>
-  <div class="fixed bottom-6 left-4 right-4 z-40">
+  <div class="fixed bottom-6 left-4 right-4 z-40 max-w-[720px] mx-auto">
     <nav
       class="relative flex items-center justify-between px-6 py-4 bg-background-start/90 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl shadow-black/50"
     >

@@ -8,7 +8,7 @@ import DepositModal from '@/components/modals/DepositModal.vue'
   <div class="relative min-h-screen bg-background-start flex flex-col">
     <AppHeader />
 
-    <main class="flex-1 pb-28 overview-hidden">
+    <main class="flex-1 pb-28 overview-hidden max-w-[540px] mx-auto w-full">
       <slot />
     </main>
 
