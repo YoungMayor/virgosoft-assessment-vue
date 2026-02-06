@@ -16,7 +16,7 @@
     "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
-    "@unhead/vue": "^2.1.2",
+    "@unhead/vue": "^2.1.3",
     "lucide-vue-next": "^0.563.0",
     "pinia": "^3.0.4",
     "vite-plugin-pwa": "^1.2.0",
